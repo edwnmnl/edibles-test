@@ -1,23 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import "./App.css";
+import FoodMenu from "./components/FoodMenu";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import DateMenu from "./components/DateMenu";
+import { data } from "./data";
 
 function App() {
+  const [menu, setMenu] = useState(null);
+
+  useEffect(() => {
+    setMenu(getMenuByDate("01/02/2021"));
+  }, []);
+
+  const getMenuByDate = (date) => {
+    let result = null;
+    data.map((item) => {
+      if (item.date === date) {
+        // console.log("result found: " + item);
+        result = item;
+      }
+      console.log(result);
+    });
+    return result.menu;
+  };
+
+  const handleDateChange = (date) => {
+    console.log("date: " + date);
+
+    const menuData = getMenuByDate(date);
+    setMenu(menuData);
+    console.log(getMenuByDate(date));
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+      <Header />
+      <div className="container">
+        <br />
+        <br />
+        <h2 className="page__title">Choose your dishes</h2>
+        <p style={{ textAlign: "center" }}>
+          As per your recomended calorie, choose your dishes from below
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <br />
+        <br />
+        <br />
+      </div>
+      <main>
+        <div className="container">
+          <DateMenu onChange={handleDateChange} />
+
+          <FoodMenu menu={menu} />
+        </div>
+      </main>
+      <Footer />
     </div>
   );
 }
