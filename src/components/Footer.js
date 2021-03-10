@@ -1,6 +1,16 @@
 const Footer = () => {
   return (
     <>
+      <section
+        id="contact__form"
+        style={{ backgroundImage: "url('/img/contact-form-bg.png" }}
+      >
+        <div className="container">
+          <div className="contact__form_title">
+            Feel free to contact us for your customized meal plan
+          </div>
+        </div>
+      </section>
       <footer>
         <div className="container">
           <div className="footer__row">
@@ -13,7 +23,8 @@ const Footer = () => {
               <p>
                 Edible Kitechen Services
                 <br />
-                JN Stadium, Kaloor Kochi - 680664
+                JN Stadium, Kaloor <br />
+                Kochi - 680664
               </p>
             </div>
             <div className="footer__column">
@@ -67,6 +78,8 @@ const Footer = () => {
               </div>
             </div>
           </div>
+          <br />
+          <br />
           <hr />
           <div className="footer__credits">
             Copyright 2020-2021 Edibles - All rights resserved
