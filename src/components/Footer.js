@@ -1,16 +1,6 @@
 const Footer = () => {
   return (
     <>
-      <section
-        id="contact__form"
-        style={{ backgroundImage: "url('/img/contact-form-bg.png" }}
-      >
-        <div className="container">
-          <div className="contact__form_title">
-            Feel free to contact us for your customized meal plan
-          </div>
-        </div>
-      </section>
       <footer>
         <div className="container">
           <div className="footer__row">
@@ -29,7 +19,7 @@ const Footer = () => {
             </div>
             <div className="footer__column">
               <div className="footer__title">Phone</div>
-              <p>01243986371</p>
+              <p>+91 9243986371</p>
             </div>
             <div className="footer__column">
               <div className="footer__title">Quick links</div>

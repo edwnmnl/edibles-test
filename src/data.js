@@ -248,7 +248,7 @@ export const data = [
         options: [
           {
             name: "Beef Salad - Mozarella",
-            image_url: "https://picsum.photos/seed/pic2323sum1/200/250",
+            image_url: "https://picsum.photos/seed/pic232ssas3sum1/200/250",
           },
           {
             name: "Asian Beef Salad",
@@ -265,7 +265,7 @@ export const data = [
           },
           {
             name: "Asian Beef Salad",
-            image_url: "https://picsum.photos/seed/pic234234sum2/200/250",
+            image_url: "https://picsum.photos/seed/pic234s234sum2/200/250",
           },
         ],
       },
@@ -274,11 +274,11 @@ export const data = [
         options: [
           {
             name: "Beef Salad - Mozarella",
-            image_url: "https://picsum.photos/seed/pics234234um1/200/250",
+            image_url: "https://picsum.photos/seed/pics234234aum1/200/250",
           },
           {
             name: "Asian Beef Salad",
-            image_url: "https://picsum.photos/seed/pics23423423um2/200/250",
+            image_url: "https://picsum.photos/seed/pics23423423sdum2/200/250",
           },
         ],
       },

@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body,
 div,
@@ -188,7 +192,7 @@ header {
 .nav__button {
   background: #000;
   color: #fff;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
   text-transform: uppercase;
@@ -207,7 +211,7 @@ main {
   color: #000000;
   opacity: 1;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 /* Sidebar */
@@ -329,7 +333,6 @@ main {
   background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
-  height: 500px;
 }
 
 .contact__form_title {
@@ -340,12 +343,68 @@ main {
   text-transform: capitalize;
 }
 
+.form__container {
+  display: flex;
+  margin-top: 50px;
+  background: #ffffff;
+  /* flex-direction: column; */
+  /* border: 1px solid rebeccapurple; */
+  flex-wrap: wrap;
+}
+
+.form__inner_container {
+  display: flex;
+  width: 80%;
+  padding-bottom: 30px;
+  padding-right: 12px;
+  padding-left: 12px;
+  justify-content: space-evenly;
+}
+
+.form__container > div {
+  align-self: stretch;
+}
+
+.form__item {
+  /* border: 1px solid forestgreen; */
+  /* width: 50%; */
+  padding: 30px 0px;
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-bottom: 0;
+}
+
+.form__item label {
+  color: #000;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.form__item input {
+  border: none;
+  background: #eee;
+  padding: 10px;
+  width: 100%;
+  align-self: stretch;
+  display: block;
+  box-sizing: border-box;
+}
+
+.form__button {
+  width: 20%;
+}
+.form__button button {
+  width: 100%;
+  height: 100%;
+  border: 0px;
+}
 /* Footer */
 
 footer {
   /* background: black; */
-  height: 300px;
-  padding: 60px 0px;
+  padding: 30px 0px 50px 0px;
 }
 
 .footer__row {
@@ -376,7 +435,7 @@ footer {
 
 .footer__links {
   text-decoration: none;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
   color: #474747;
 }
 .footer__links a {

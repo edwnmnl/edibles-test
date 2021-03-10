@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import DateMenu from "./components/DateMenu";
 import { data } from "./data";
+import ContactForm from "./components/ContactForm";
 
 function App() {
   const [menu, setMenu] = useState(null);
@@ -40,6 +41,16 @@ function App() {
         <br />
         <br />
         <h2 className="page__title">Choose your dishes</h2>
+
+        <center>
+          <img
+            src="/img/underline.png"
+            alt="sdsd"
+            width="350px"
+            // style={{ textAlign: "center" }}
+          />
+        </center>
+        <br />
         <p style={{ textAlign: "center" }}>
           As per your recomended calorie, choose your dishes from below
         </p>
@@ -54,6 +65,7 @@ function App() {
           <FoodMenu menu={menu} />
         </div>
       </main>
+      <ContactForm />
       <Footer />
     </div>
   );
