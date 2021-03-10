@@ -15,7 +15,7 @@ function App() {
 
   const getMenuByDate = (date) => {
     let result = null;
-    data.map((item) => {
+    data.forEach((item) => {
       if (item.date === date) {
         // console.log("result found: " + item);
         result = item;
