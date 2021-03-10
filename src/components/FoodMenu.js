@@ -9,7 +9,7 @@ const FoodItem = (props) => {
 
   return (
     <div className="food__item">
-      <h3>{props.item.type}</h3>
+      <div className="meal__type">{props.item.type}</div>
       <br />
       <img src={props.item.options[option].image_url} alt="lorem" />
       <div className="switch">
@@ -27,7 +27,7 @@ const FoodItem = (props) => {
         </div>
       </div>
       <br />
-      <h3>{props.item.options[option].name}</h3>
+      <div className="meal__name">{props.item.options[option].name}</div>
     </div>
   );
 };

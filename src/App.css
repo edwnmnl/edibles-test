@@ -133,9 +133,10 @@ table {
   width: 135px;
   height: 45px;
   background: #27a12f 0% 0% no-repeat padding-box;
-  border: 1px solid #70707033;
+  border: 1px solid #27a12f;
   opacity: 1;
   color: #fff;
+  font-size: 14px;
 }
 
 header {
@@ -170,6 +171,7 @@ header {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 500;
+  color: #000000;
 }
 
 .header__left__menu .nav__links {
@@ -272,6 +274,16 @@ main {
   width: 100%;
 }
 
+.meal__type {
+  color: #8c8c8c;
+  font-weight: 500;
+}
+
+.meal__name {
+  color: #474747;
+  font-weight: 700;
+}
+
 .switch {
   background-color: #27a12f;
   padding: 10px;
@@ -286,22 +298,18 @@ main {
   padding: 10px;
   color: #fff;
   font-size: 25px;
-  padding: 15px 30px;
+  padding: 10px 25px;
   font-weight: 500;
-
-  /* background: #FFFFFF 0% 0% no-repeat padding-box; */
   border-radius: 15px;
-  opacity: 1;
 }
 
 .switch__option_active {
   padding: 10px;
   background: #fff;
   color: #6d6d6d;
-  padding: 15px 30px;
+  padding: 10px 25px;
   font-size: 25px;
   font-weight: 500;
-  /* background: #FFFFFF 0% 0% no-repeat padding-box; */
   border-radius: 15px;
   opacity: 1;
 }
