@@ -65,6 +65,7 @@ function App() {
           <FoodMenu menu={menu} />
         </div>
       </main>
+
       <ContactForm />
       <Footer />
     </div>

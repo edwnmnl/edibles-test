@@ -3,8 +3,12 @@ import { useState } from "react";
 const FoodItem = (props) => {
   const [option, setOption] = useState(0);
 
-  const changeOption = (option) => {
-    setOption(option);
+  const changeOption = (e) => {
+    if (e.target.checked) {
+      setOption(1);
+    } else {
+      setOption(0);
+    }
   };
 
   return (
@@ -12,20 +16,14 @@ const FoodItem = (props) => {
       <div className="meal__type">{props.item.type}</div>
       <br />
       <img src={props.item.options[option].image_url} alt="lorem" />
-      <div className="switch">
-        <div
-          className={option === 0 ? "switch__option_active" : "switch__option"}
-          onClick={() => changeOption(0)}
-        >
-          A
-        </div>
-        <div
-          className={option === 1 ? "switch__option_active" : "switch__option"}
-          onClick={() => changeOption(1)}
-        >
-          B
-        </div>
-      </div>
+      <label class="switch">
+        <input type="checkbox" onChange={changeOption} />
+        <span class="slider round">
+          <span class="on">A</span>
+          <span class="off">B</span>
+        </span>
+      </label>
+
       <br />
       <div className="meal__name">{props.item.options[option].name}</div>
     </div>

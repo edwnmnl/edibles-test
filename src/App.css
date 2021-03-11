@@ -303,37 +303,107 @@ main {
   font-weight: 700;
 }
 
+/* The switch - the box around the slider */
 .switch {
-  background-color: #27a12f;
-  padding: 10px;
-  display: flex;
-  border-radius: 15px;
+  display: inline-block;
+  width: 165px;
+  height: 64px;
   position: absolute;
   top: 65%;
-}
-
-.switch__option {
-  background: transparent;
-  padding: 10px;
-  color: #fff;
-  font-size: 25px;
-  padding: 10px 25px;
-  font-weight: 500;
   border-radius: 15px;
 }
 
-.switch__option_active {
-  padding: 10px;
-  background: #fff;
-  color: #6d6d6d;
-  padding: 10px 25px;
-  font-size: 25px;
-  font-weight: 500;
-  border-radius: 15px;
-  opacity: 1;
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-/* COntact form  */
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #27a12f;
+  border-radius: 15px;
+  padding: 10px;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "A";
+  font-size: 25px;
+  font-weight: 500;
+  height: 53px;
+  width: 78px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 10px;
+  bottom: 5px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: 2;
+}
+
+input:checked + .slider {
+  background-color: #27a12f;
+}
+
+input:checked + .slider::before {
+  content: "B";
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(66px);
+  -ms-transform: translateX(66px);
+  transform: translateX(66px);
+}
+
+.slider.round:before {
+  border-radius: 15px;
+}
+
+.on {
+  color: white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50px;
+  font-size: 25px;
+  height: 53px;
+  width: 78px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.off {
+  color: white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  right: -30px;
+  font-size: 25px;
+  height: 53px;
+  width: 78px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contact form  */
 
 #contact__form {
   background-color: #000;
@@ -358,8 +428,6 @@ main {
   display: flex;
   margin-top: 50px;
   background: #ffffff;
-  /* flex-direction: column; */
-  /* border: 1px solid rebeccapurple; */
   flex-wrap: wrap;
 }
 
