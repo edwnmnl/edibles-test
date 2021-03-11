@@ -255,6 +255,17 @@ main {
   color: #27a12f;
 }
 
+.date__menu_date_active::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url("https://edibles-test.netlify.app/down-arrow.png") no-repeat;
+  position: absolute;
+  margin-left: 34px;
+  margin-top: auto;
+  margin-bottom: 5px;
+}
+
 .date__menu_button {
   border-radius: 7px;
 }
